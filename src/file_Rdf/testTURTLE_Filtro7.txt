@@ -1,0 +1,51 @@
+@prefix fuzzy-owl: <http://informatica.di.uniba.it/itps/labinf/fuzzy/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix fuzzy: <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/> .
+
+fuzzy:OWA_61  a              fuzzy:aggregator ;
+        fuzzy-owl:hasValues  [ a       rdf:Seq ;
+                               rdf:_1  "0.4"^^xsd:double
+                             ] .
+
+fuzzy:OWA_66  a              fuzzy:aggregator ;
+        fuzzy-owl:hasValues  [ a       rdf:Seq ;
+                               rdf:_1  "0.4"^^xsd:double
+                             ] .
+
+fuzzy:DescriptionBasedFilter_62
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_63 .
+
+fuzzy:DescriptionBasedFilter_67
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_68 .
+
+fuzzy:ParallelFilter_65
+        a                        rdf:Bag , fuzzy:filter ;
+        rdf:_1                   fuzzy:DescriptionBasedFilter_67 ;
+        fuzzy-owl:hasAggregator  fuzzy:OWA_66 .
+
+fuzzy:ParallelFilter_60
+        a                        rdf:Bag , fuzzy:filter ;
+        rdf:_1                   fuzzy:DescriptionBasedFilter_62 ;
+        fuzzy-owl:hasAggregator  fuzzy:OWA_61 .
+
+fuzzy:Metadata_63  fuzzy-owl:hasAttribute
+                <edizione> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_64 ;
+        fuzzy-owl:hasInterpretation  "PossibilisticInterpretation" .
+
+fuzzy:Metadata_68  fuzzy-owl:hasAttribute
+                <autori> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_69 ;
+        fuzzy-owl:hasInterpretation  "PossibilisticInterpretation" .
+
+fuzzy:SequenceFilter_59
+        a       rdf:Seq , fuzzy:filter ;
+        rdf:_1  fuzzy:ParallelFilter_60 ;
+        rdf:_2  fuzzy:ParallelFilter_65 .
+
+fuzzy:FuzzySet_64  a  rdf:Bag .
+
+fuzzy:FuzzySet_69  a  rdf:Bag .

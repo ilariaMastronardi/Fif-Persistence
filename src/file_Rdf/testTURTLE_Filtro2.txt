@@ -1,0 +1,15 @@
+@prefix fuzzy-owl: <http://informatica.di.uniba.it/itps/labinf/fuzzy/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix fuzzy: <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/> .
+
+fuzzy:Metadata_5  fuzzy-owl:hasAttribute
+                <anno> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_6 ;
+        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+
+fuzzy:DescriptionBasedFilter_4
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_5 .
+
+fuzzy:FuzzySet_6  a  rdf:Bag .

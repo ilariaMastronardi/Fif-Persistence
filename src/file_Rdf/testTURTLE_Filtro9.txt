@@ -1,0 +1,94 @@
+@prefix fuzzy-owl: <http://informatica.di.uniba.it/itps/labinf/fuzzy/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix fuzzy: <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/> .
+
+fuzzy:DescriptionBasedFilter_94
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_95 .
+
+fuzzy:FuzzySet_90  a  rdf:Bag .
+
+fuzzy:FuzzySet_96  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "dolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_2  [ fuzzy-owl:hasElement          "salato"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_3  [ fuzzy-owl:hasElement          "agrodolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
+                ] .
+
+fuzzy:SequenceFilter_91
+        a       rdf:Seq , fuzzy:filter ;
+        rdf:_1  fuzzy:ParallelFilter_92 .
+
+fuzzy:SequenceFilter_81
+        a       rdf:Seq , fuzzy:filter ;
+        rdf:_1  fuzzy:DescriptionBasedFilter_82 ;
+        rdf:_2  fuzzy:DescriptionBasedFilter_85 ;
+        rdf:_3  fuzzy:DescriptionBasedFilter_88 .
+
+fuzzy:ParallelFilter_92
+        a                        rdf:Bag , fuzzy:filter ;
+        rdf:_1                   fuzzy:DescriptionBasedFilter_94 ;
+        fuzzy-owl:hasAggregator  fuzzy:OWA_93 .
+
+fuzzy:SequenceFilter_80
+        a       rdf:Seq , fuzzy:filter ;
+        rdf:_1  fuzzy:SequenceFilter_81 ;
+        rdf:_2  fuzzy:SequenceFilter_91 .
+
+fuzzy:Metadata_83  fuzzy-owl:hasAttribute
+                <sapore> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_84 ;
+        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+
+fuzzy:Metadata_89  fuzzy-owl:hasAttribute
+                <produzione> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_90 ;
+        fuzzy-owl:hasInterpretation  "OpenVeristicInterpretation" .
+
+fuzzy:DescriptionBasedFilter_82
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_83 .
+
+fuzzy:DescriptionBasedFilter_88
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_89 .
+
+fuzzy:FuzzySet_84  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "dolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_2  [ fuzzy-owl:hasElement          "salato"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_3  [ fuzzy-owl:hasElement          "agrodolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
+                ] .
+
+fuzzy:OWA_93  a              fuzzy:aggregator ;
+        fuzzy-owl:hasValues  [ a       rdf:Seq ;
+                               rdf:_1  "0.2"^^xsd:double
+                             ] .
+
+fuzzy:Metadata_86  fuzzy-owl:hasAttribute
+                <categoriacibo> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_87 ;
+        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+
+fuzzy:Metadata_95  fuzzy-owl:hasAttribute
+                <sapore> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_96 ;
+        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+
+fuzzy:DescriptionBasedFilter_85
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_86 .
+
+fuzzy:FuzzySet_87  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "hamburger"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.8"^^xsd:double
+                ] .

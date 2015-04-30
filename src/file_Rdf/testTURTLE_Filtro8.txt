@@ -1,0 +1,55 @@
+@prefix fuzzy-owl: <http://informatica.di.uniba.it/itps/labinf/fuzzy/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix fuzzy: <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/> .
+
+fuzzy:DescriptionBasedFilter_77
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_78 .
+
+fuzzy:FuzzySet_73  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "dolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_2  [ fuzzy-owl:hasElement          "salato"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_3  [ fuzzy-owl:hasElement          "agrodolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
+                ] .
+
+fuzzy:Metadata_75  fuzzy-owl:hasAttribute
+                <categoriacibo> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_76 ;
+        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+
+fuzzy:Metadata_78  fuzzy-owl:hasAttribute
+                <produzione> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_79 ;
+        fuzzy-owl:hasInterpretation  "OpenVeristicInterpretation" .
+
+fuzzy:FuzzySet_76  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "hamburger"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.8"^^xsd:double
+                ] .
+
+fuzzy:SequenceFilter_70
+        a       rdf:Seq , fuzzy:filter ;
+        rdf:_1  fuzzy:DescriptionBasedFilter_71 ;
+        rdf:_2  fuzzy:DescriptionBasedFilter_74 ;
+        rdf:_3  fuzzy:DescriptionBasedFilter_77 .
+
+fuzzy:FuzzySet_79  a  rdf:Bag .
+
+fuzzy:DescriptionBasedFilter_71
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_72 .
+
+fuzzy:DescriptionBasedFilter_74
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_75 .
+
+fuzzy:Metadata_72  fuzzy-owl:hasAttribute
+                <sapore> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_73 ;
+        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .

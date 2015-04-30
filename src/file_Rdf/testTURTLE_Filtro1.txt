@@ -1,0 +1,24 @@
+@prefix fuzzy-owl: <http://informatica.di.uniba.it/itps/labinf/fuzzy/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix fuzzy: <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/> .
+
+fuzzy:DescriptionBasedFilter_1
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_2 .
+
+fuzzy:FuzzySet_3  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "horror"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.7"^^xsd:double
+                ] ;
+        rdf:_2  [ fuzzy-owl:hasElement          "thriller"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
+                ] ;
+        rdf:_3  [ fuzzy-owl:hasElement          "drammatico"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.2"^^xsd:double
+                ] .
+
+fuzzy:Metadata_2  fuzzy-owl:hasAttribute
+                <anno> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_3 ;
+        fuzzy-owl:hasInterpretation  "OpenVeristicInterpretation" .
