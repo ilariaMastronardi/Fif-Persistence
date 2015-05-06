@@ -248,7 +248,7 @@ public class FilterRebuilderFromRDF {
      
    
      */
-    static Filter rebuildRecursion(Model model, Resource resourceFilter){
+   static Filter rebuildRecursion(Model model, Resource resourceFilter){
     	
     	assert (model!=null) : "il modello deve essere stato valorizzato";
     	assert (resourceFilter!=null): "La risorsa non può essere null";
@@ -258,16 +258,16 @@ public class FilterRebuilderFromRDF {
     	
     	if (localName.contains("DescriptionBasedFilter")){
     		
-    		filter=RebuilderFactory.getDescrBasedFilterRecursion().rebuildFilter(model, resourceFilter);
+    		filter=RebuilderFactory.getDescrBasedFilterRebuild().rebuildFilter(model, resourceFilter);
     		
     		
     	}else if (localName.contains("ParallelFilter")){
     		
-    		filter=RebuilderFactory.getParallelFilterRecursion().rebuildFilter(model, resourceFilter);
+    		filter=RebuilderFactory.getParallelFilterRebuild().rebuildFilter(model, resourceFilter);
     		
     	}else if (localName.contains("SequenceFilter")){
     		
-    		filter=RebuilderFactory.getSequenceFilterRecursion().rebuildFilter(model, resourceFilter);
+    		filter=RebuilderFactory.getSequenceFilterRebuild().rebuildFilter(model, resourceFilter);
     		
     	}
     	

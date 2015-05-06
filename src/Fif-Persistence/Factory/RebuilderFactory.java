@@ -34,7 +34,7 @@ public class RebuilderFactory {
 	     * @return An object that contains an implementation of a Parallel Filter's
 	     *         reconstruction.
 	     */
-	    public static RebuilderRecursion getParallelFilterRecursion() {
+	    public static RebuilderRecursion getParallelFilterRebuild() {
 	   
 		return parallelFilter;
 	    }
@@ -46,7 +46,7 @@ public class RebuilderFactory {
 	     * @return An object that contains an implementation of a Sequence Filter's
 	     *     reconstruction.
 	     */
-	    public static RebuilderRecursion getSequenceFilterRecursion() {
+	    public static RebuilderRecursion getSequenceFilterRebuild() {
 		return sequenceFilter;
 	    }
 
@@ -57,7 +57,7 @@ public class RebuilderFactory {
 	     * @return An object that contains an implementation of a Description Based
 	     *         Filter's reconstruction.
 	     */
-	    public static RebuilderRecursion getDescrBasedFilterRecursion() {
+	    public static RebuilderRecursion getDescrBasedFilterRebuild() {
 		return descrBasedFilter;
 	    }
 }
