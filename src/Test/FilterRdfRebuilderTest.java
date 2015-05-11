@@ -29,7 +29,8 @@ public class FilterRdfRebuilderTest extends TestCase {
 	private FilterRdfWriter testWriter;
 	private FilterRebuilderFromRDF testRebuilder;
 	private Filter[] filters;
-	private String typeLanguage="";
+	private RDFType[] rdfType;
+	
 	
 	
 	 // il metodo setUp viene eseguito prima di tutti gli altri
@@ -38,8 +39,8 @@ public class FilterRdfRebuilderTest extends TestCase {
 	testWriter =new FilterRdfWriter();
 	testRebuilder =new FilterRebuilderFromRDF();
 	filters=new Filter[10];
-	typeLanguage="TURTLE";
-	setPrefixes(testWriter);
+	rdfType= populateTypes();
+	
 	
 	// inizializzo i filtri
 	filters[0]=createFirstFilter();
@@ -57,12 +58,76 @@ public class FilterRdfRebuilderTest extends TestCase {
     
   
 
+	private RDFType[] populateTypes() {
+		
+		RDFType[] result = new RDFType[5];
+
+		for (int i = 0; i < result.length; i++) {
+		   
+			result[i] = chooseRdfType(i);
+		}
+		
+		return result;
+	
+	}
+
+
+	private RDFType chooseRdfType(int i) {
+		
+		
+		switch (i) {
+		case 0: {
+		    return RDFType.TURTLE;
+		}
+		case 1: {
+		    return RDFType.N3;
+		}
+		case 2: {
+		    return RDFType.N_TRIPLES;
+		}
+		case 3: {
+		    return RDFType.RDF_XML;
+		}
+		case 4: {
+		    return RDFType.RDF_XML_ABBREV;
+		}
+		default:
+		    throw new IndexOutOfBoundsException("Intero " + i + " fuori range");
+
+		}
+	}
+
+	private String chooseInputLanguage(int i) {
+		
+	
+		switch (i) {
+		case 0: {
+		    return "TURTLE";
+		}
+		case 1: {
+		    return "N3";
+		}
+		case 2: {
+		    return "N-TRIPLE";
+		}
+		case 3: {
+		    return "RDF/XML";
+		}
+		case 4: {
+		    return "RDF/XML-ABBREV";
+		}
+		default:
+		    throw new IndexOutOfBoundsException("Intero " + i + " fuori range");
+
+		}
+	}
+
 	// il metodo tear down viene eseguito immediatamente dopo i metodi di test
     protected void tearDown() throws Exception {
 	testWriter = null;
 	testRebuilder = null;
 	filters= null;
-	typeLanguage=null;
+	rdfType=null;
 	super.tearDown();
     }
 	
@@ -71,21 +136,21 @@ public class FilterRdfRebuilderTest extends TestCase {
     
 	public void testRebuilder() throws FileNotFoundException, URISyntaxException  {
 		
-	
-	   // qui va il ciclo
+		setPrefixes(testWriter);
+		
 		for (int i=0;i<=filters.length-1;i++){
 			
-			// converto il filtro in un documento RDF tramite il package fif_Representation
-			testWriter.writeRdf(filters[i], new PrintWriter("src/file_rdf/testTURTLE_Filtro"+ (i + 1) + ".txt"),RDFType.TURTLE);
+			 for (int j = 0; j < rdfType.length; j++) {
+				 
+				 // converto il filtro in un documento RDF tramite il package fif_Representation
+				 testWriter.writeRdf(filters[i], new PrintWriter("src/file_rdf/test"+ rdfType[j] + "_Filtro"+ (i + 1) + ".txt"),rdfType[j]);
 			
-			// leggo il file appena creato
-			InputStream inputFile=new FileInputStream("src/file_rdf/testTURTLE_Filtro"+ (i + 1) + ".txt");
-			
-			Filter filterAfter=testRebuilder.readRdfFile(inputFile,"TURTLE");
+				 InputStream inputFile=new FileInputStream("src/file_rdf/test"+ rdfType[j] + "_Filtro"+ (i + 1) + ".txt");
+				 // leggo il file appena creato
+				 Filter filterAfter=testRebuilder.readRdfFile(inputFile,chooseInputLanguage(j));
 		
-			//System.out.println(filters[i].equals(filterAfter));
-			assertTrue(filters[i].equals(filterAfter));
-			
+				 assertTrue(filters[i].equals(filterAfter));
+			 }
 		}
 		
 
@@ -95,7 +160,7 @@ public class FilterRdfRebuilderTest extends TestCase {
 	private Filter createFirstFilter(){
 		
 		// creazione l'attributo
-		Attribute att1 = new Attribute("anno");
+		Attribute att1 = new Attribute("String:anno");
 		
 		// creazione fuzzy set
 		FuzzySet fs1 = new FuzzySet();
@@ -118,7 +183,7 @@ public class FilterRdfRebuilderTest extends TestCase {
 	private Filter createSecondFilter() {
 		
 		// creazione l'attributo
-				Attribute att1 = new Attribute("anno");
+				Attribute att1 = new Attribute("String:anno");
 				
 				// creazione fuzzy set
 				FuzzySet fs1 = new FuzzySet();
@@ -140,9 +205,9 @@ public class FilterRdfRebuilderTest extends TestCase {
 	// TRE METADATA CON STESSA INTERPRETAZIONE
 	private Filter createThirdFilter() {
 			
-		Attribute att1 = new Attribute("genere");
-		Attribute att2 = new Attribute("anno");
-		Attribute att3 = new Attribute("attori");
+		Attribute att1 = new Attribute("String:genere");
+		Attribute att2 = new Attribute("String:anno");
+		Attribute att3 = new Attribute("String:attori");
 
 		FuzzySet fs1 = new FuzzySet();
 		FuzzySet fs2 = new FuzzySet();
@@ -179,8 +244,8 @@ public class FilterRdfRebuilderTest extends TestCase {
 	// 2 METADATA CON 2 INTERPRETAZIONI DIFFERENTI
 	private Filter createFourthFilter() {
 				
-		Attribute att1 = new Attribute("genere");
-		Attribute att2 = new Attribute("anno");
+		Attribute att1 = new Attribute("String:genere");
+		Attribute att2 = new Attribute("String:anno");
 
 		FuzzySet fs1 = new FuzzySet();
 		fs1.setValue("horror", 0.9);
@@ -222,8 +287,8 @@ public class FilterRdfRebuilderTest extends TestCase {
 	//2 METADATA,2 FUZZY SET >1,1 SEQUENCE FILTER CON DUE DESCRIPTION BASED FILTER
 	private Filter createFifthFilter() {
 		
-		Attribute att1 = new Attribute("titolo");
-		Attribute att2 = new Attribute("attori");
+		Attribute att1 = new Attribute("String:titolo");
+		Attribute att2 = new Attribute("String:attori");
 
 		FuzzySet fs1 = new FuzzySet();
 		fs1.setValue("the vampire diares", 0.9);
@@ -282,8 +347,8 @@ public class FilterRdfRebuilderTest extends TestCase {
 	//2 METADATA CON STESSA INTERPRETAZIONE
 	private Filter createSeventhFilter(){
 		
-		Attribute att1 = new Attribute("edizione");
-		Attribute att2 = new Attribute("autori");
+		Attribute att1 = new Attribute("String:edizione");
+		Attribute att2 = new Attribute("String:autori");
 
 		FuzzySet fs1 = new FuzzySet();
 		FuzzySet fs2 = new FuzzySet();
@@ -318,9 +383,9 @@ public class FilterRdfRebuilderTest extends TestCase {
 	// 2 METADATA CON STESSA INTERPRETAZIONE E 1 METADATA CON INTERPRETAZIONE DIVERSA  
 	private Filter createEightFilter(){
 		
-		Attribute att1 = new Attribute("sapore");
-		Attribute att2 = new Attribute("categoriaCibo");
-		Attribute att3 = new Attribute("produzione");
+		Attribute att1 = new Attribute("String:sapore");
+		Attribute att2 = new Attribute("String:categoriaCibo");
+		Attribute att3 = new Attribute("String:produzione");
 
 		FuzzySet fs1 = new FuzzySet();
 		FuzzySet fs2 = new FuzzySet();
@@ -361,7 +426,7 @@ public class FilterRdfRebuilderTest extends TestCase {
 		Filter f1=createEightFilter();
 	
 		//creo un descriptionbasedfilter
-		Attribute att1 = new Attribute("sapore");
+		Attribute att1 = new Attribute("String:sapore");
 		
 		FuzzySet fs1 = new FuzzySet();
 		fs1.setValue("agrodolce", 1);
@@ -412,6 +477,6 @@ public class FilterRdfRebuilderTest extends TestCase {
 			fw.setRdfPrefix("xsd", CONSTANTS.XSD_URI);
 			fw.setRdfPrefix("rdf", CONSTANTS.RDF_URI);
 
-		    }
+	 }
 
 }
