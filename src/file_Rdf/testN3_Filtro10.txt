@@ -1,0 +1,172 @@
+@prefix fuzzy-owl: <http://informatica.di.uniba.it/itps/labinf/fuzzy/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix fuzzy: <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/> .
+
+fuzzy:FuzzySet_534  a  rdf:Bag .
+
+fuzzy:OWA_537  a             fuzzy:aggregator ;
+        fuzzy-owl:hasValues  [ a       rdf:Seq ;
+                               rdf:_1  "0.2"^^xsd:double
+                             ] .
+
+fuzzy:SequenceFilter_517
+        a       rdf:Seq , fuzzy:filter ;
+        rdf:_1  fuzzy:DescriptionBasedFilter_518 ;
+        rdf:_2  fuzzy:DescriptionBasedFilter_521 .
+
+fuzzy:OWA_516  a             fuzzy:aggregator ;
+        fuzzy-owl:hasValues  [ a       rdf:Seq ;
+                               rdf:_1  "0.4"^^xsd:double
+                             ] .
+
+fuzzy:Metadata_530  fuzzy-owl:hasAttribute
+                <string:categoriacibo> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_531 ;
+        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+
+fuzzy:SequenceFilter_511
+        a       rdf:Seq , fuzzy:filter ;
+        rdf:_1  fuzzy:DescriptionBasedFilter_512 ;
+        rdf:_2  fuzzy:ParallelFilter_515 ;
+        rdf:_3  fuzzy:SequenceFilter_524 .
+
+fuzzy:SequenceFilter_524
+        a       rdf:Seq , fuzzy:filter ;
+        rdf:_1  fuzzy:SequenceFilter_525 ;
+        rdf:_2  fuzzy:SequenceFilter_535 .
+
+fuzzy:FuzzySet_520  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "the originals"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.7"^^xsd:double
+                ] ;
+        rdf:_2  [ fuzzy-owl:hasElement          "the vampire diares"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.9"^^xsd:double
+                ] .
+
+fuzzy:Metadata_522  fuzzy-owl:hasAttribute
+                <string:attori> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_523 ;
+        fuzzy-owl:hasInterpretation  "PossibilisticInterpretation" .
+
+fuzzy:DescriptionBasedFilter_521
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_522 .
+
+fuzzy:FuzzySet_540  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "dolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_2  [ fuzzy-owl:hasElement          "salato"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_3  [ fuzzy-owl:hasElement          "agrodolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
+                ] .
+
+fuzzy:Metadata_527  fuzzy-owl:hasAttribute
+                <string:sapore> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_528 ;
+        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+
+fuzzy:DescriptionBasedFilter_526
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_527 .
+
+fuzzy:Metadata_519  fuzzy-owl:hasAttribute
+                <string:titolo> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_520 ;
+        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+
+fuzzy:DescriptionBasedFilter_518
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_519 .
+
+fuzzy:Metadata_513  fuzzy-owl:hasAttribute
+                <string:anno> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_514 ;
+        fuzzy-owl:hasInterpretation  "OpenVeristicInterpretation" .
+
+fuzzy:DescriptionBasedFilter_512
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_513 .
+
+fuzzy:SequenceFilter_535
+        a       rdf:Seq , fuzzy:filter ;
+        rdf:_1  fuzzy:ParallelFilter_536 .
+
+fuzzy:FuzzySet_531  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "hamburger"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.8"^^xsd:double
+                ] .
+
+fuzzy:Metadata_539  fuzzy-owl:hasAttribute
+                <string:sapore> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_540 ;
+        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+
+fuzzy:DescriptionBasedFilter_538
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_539 .
+
+fuzzy:Metadata_533  fuzzy-owl:hasAttribute
+                <string:produzione> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_534 ;
+        fuzzy-owl:hasInterpretation  "OpenVeristicInterpretation" .
+
+fuzzy:DescriptionBasedFilter_532
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_533 .
+
+fuzzy:FuzzySet_523  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "katherine paul"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.7"^^xsd:double
+                ] ;
+        rdf:_2  [ fuzzy-owl:hasElement          "paul wesley"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.2"^^xsd:double
+                ] ;
+        rdf:_3  [ fuzzy-owl:hasElement          "ian somerhlander"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
+                ] .
+
+fuzzy:FuzzySet_528  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "dolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_2  [ fuzzy-owl:hasElement          "salato"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_3  [ fuzzy-owl:hasElement          "agrodolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
+                ] .
+
+fuzzy:ParallelFilter_536
+        a                        rdf:Bag , fuzzy:filter ;
+        rdf:_1                   fuzzy:DescriptionBasedFilter_538 ;
+        fuzzy-owl:hasAggregator  fuzzy:OWA_537 .
+
+fuzzy:DescriptionBasedFilter_529
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_530 .
+
+fuzzy:ParallelFilter_515
+        a                        rdf:Bag , fuzzy:filter ;
+        rdf:_1                   fuzzy:SequenceFilter_517 ;
+        fuzzy-owl:hasAggregator  fuzzy:OWA_516 .
+
+fuzzy:FuzzySet_514  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "horror"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.7"^^xsd:double
+                ] ;
+        rdf:_2  [ fuzzy-owl:hasElement          "thriller"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
+                ] ;
+        rdf:_3  [ fuzzy-owl:hasElement          "drammatico"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.2"^^xsd:double
+                ] .
+
+fuzzy:SequenceFilter_525
+        a       rdf:Seq , fuzzy:filter ;
+        rdf:_1  fuzzy:DescriptionBasedFilter_526 ;
+        rdf:_2  fuzzy:DescriptionBasedFilter_529 ;
+        rdf:_3  fuzzy:DescriptionBasedFilter_532 .

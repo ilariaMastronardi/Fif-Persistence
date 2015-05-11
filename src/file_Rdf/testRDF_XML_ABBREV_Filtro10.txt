@@ -1,0 +1,270 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:fuzzy-owl="http://informatica.di.uniba.it/itps/labinf/fuzzy/ontology/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:fuzzy="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/">
+  <rdf:Seq rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/SequenceFilter_601">
+    <rdf:li>
+      <fuzzy:filter rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_602">
+        <fuzzy-owl:hasDescription>
+          <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_603">
+            <fuzzy-owl:hasFuzzySet>
+              <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_604">
+                <rdf:li rdf:parseType="Resource">
+                  <fuzzy-owl:hasMembershipValue rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#double">0.7</fuzzy-owl:hasMembershipValue>
+                  <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                  >horror</fuzzy-owl:hasElement>
+                </rdf:li>
+                <rdf:li rdf:parseType="Resource">
+                  <fuzzy-owl:hasMembershipValue rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#double">1.0</fuzzy-owl:hasMembershipValue>
+                  <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                  >thriller</fuzzy-owl:hasElement>
+                </rdf:li>
+                <rdf:li rdf:parseType="Resource">
+                  <fuzzy-owl:hasMembershipValue rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#double">0.2</fuzzy-owl:hasMembershipValue>
+                  <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                  >drammatico</fuzzy-owl:hasElement>
+                </rdf:li>
+              </rdf:Bag>
+            </fuzzy-owl:hasFuzzySet>
+            <fuzzy-owl:hasInterpretation>OpenVeristicInterpretation</fuzzy-owl:hasInterpretation>
+            <fuzzy-owl:hasAttribute rdf:resource="string:anno"/>
+          </rdf:Description>
+        </fuzzy-owl:hasDescription>
+      </fuzzy:filter>
+    </rdf:li>
+    <rdf:li>
+      <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/ParallelFilter_605">
+        <rdf:li>
+          <rdf:Seq rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/SequenceFilter_607">
+            <rdf:li>
+              <fuzzy:filter rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_608">
+                <fuzzy-owl:hasDescription>
+                  <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_609">
+                    <fuzzy-owl:hasFuzzySet>
+                      <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_610">
+                        <rdf:li rdf:parseType="Resource">
+                          <fuzzy-owl:hasMembershipValue rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#double"
+                          >0.7</fuzzy-owl:hasMembershipValue>
+                          <fuzzy-owl:hasElement rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#string"
+                          >the originals</fuzzy-owl:hasElement>
+                        </rdf:li>
+                        <rdf:li rdf:parseType="Resource">
+                          <fuzzy-owl:hasMembershipValue rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#double"
+                          >0.9</fuzzy-owl:hasMembershipValue>
+                          <fuzzy-owl:hasElement rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#string"
+                          >the vampire diares</fuzzy-owl:hasElement>
+                        </rdf:li>
+                      </rdf:Bag>
+                    </fuzzy-owl:hasFuzzySet>
+                    <fuzzy-owl:hasInterpretation>ClosedVeristicInterpretation</fuzzy-owl:hasInterpretation>
+                    <fuzzy-owl:hasAttribute rdf:resource="string:titolo"/>
+                  </rdf:Description>
+                </fuzzy-owl:hasDescription>
+              </fuzzy:filter>
+            </rdf:li>
+            <rdf:li>
+              <fuzzy:filter rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_611">
+                <fuzzy-owl:hasDescription>
+                  <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_612">
+                    <fuzzy-owl:hasFuzzySet>
+                      <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_613">
+                        <rdf:li rdf:parseType="Resource">
+                          <fuzzy-owl:hasMembershipValue rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#double"
+                          >0.7</fuzzy-owl:hasMembershipValue>
+                          <fuzzy-owl:hasElement rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#string"
+                          >katherine paul</fuzzy-owl:hasElement>
+                        </rdf:li>
+                        <rdf:li rdf:parseType="Resource">
+                          <fuzzy-owl:hasMembershipValue rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#double"
+                          >0.2</fuzzy-owl:hasMembershipValue>
+                          <fuzzy-owl:hasElement rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#string"
+                          >paul wesley</fuzzy-owl:hasElement>
+                        </rdf:li>
+                        <rdf:li rdf:parseType="Resource">
+                          <fuzzy-owl:hasMembershipValue rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#double"
+                          >1.0</fuzzy-owl:hasMembershipValue>
+                          <fuzzy-owl:hasElement rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#string"
+                          >ian somerhlander</fuzzy-owl:hasElement>
+                        </rdf:li>
+                      </rdf:Bag>
+                    </fuzzy-owl:hasFuzzySet>
+                    <fuzzy-owl:hasInterpretation>PossibilisticInterpretation</fuzzy-owl:hasInterpretation>
+                    <fuzzy-owl:hasAttribute rdf:resource="string:attori"/>
+                  </rdf:Description>
+                </fuzzy-owl:hasDescription>
+              </fuzzy:filter>
+            </rdf:li>
+            <rdf:type rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/filter"/>
+          </rdf:Seq>
+        </rdf:li>
+        <fuzzy-owl:hasAggregator>
+          <fuzzy:aggregator rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/OWA_606">
+            <fuzzy-owl:hasValues>
+              <rdf:Seq>
+                <rdf:li rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+                >0.4</rdf:li>
+              </rdf:Seq>
+            </fuzzy-owl:hasValues>
+          </fuzzy:aggregator>
+        </fuzzy-owl:hasAggregator>
+        <rdf:type rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/filter"/>
+      </rdf:Bag>
+    </rdf:li>
+    <rdf:li>
+      <rdf:Seq rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/SequenceFilter_614">
+        <rdf:li>
+          <rdf:Seq rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/SequenceFilter_615">
+            <rdf:li>
+              <fuzzy:filter rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_616">
+                <fuzzy-owl:hasDescription>
+                  <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_617">
+                    <fuzzy-owl:hasFuzzySet>
+                      <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_618">
+                        <rdf:li rdf:parseType="Resource">
+                          <fuzzy-owl:hasMembershipValue rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#double"
+                          >0.5</fuzzy-owl:hasMembershipValue>
+                          <fuzzy-owl:hasElement rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#string"
+                          >dolce</fuzzy-owl:hasElement>
+                        </rdf:li>
+                        <rdf:li rdf:parseType="Resource">
+                          <fuzzy-owl:hasMembershipValue rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#double"
+                          >0.5</fuzzy-owl:hasMembershipValue>
+                          <fuzzy-owl:hasElement rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#string"
+                          >salato</fuzzy-owl:hasElement>
+                        </rdf:li>
+                        <rdf:li rdf:parseType="Resource">
+                          <fuzzy-owl:hasMembershipValue rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#double"
+                          >1.0</fuzzy-owl:hasMembershipValue>
+                          <fuzzy-owl:hasElement rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#string"
+                          >agrodolce</fuzzy-owl:hasElement>
+                        </rdf:li>
+                      </rdf:Bag>
+                    </fuzzy-owl:hasFuzzySet>
+                    <fuzzy-owl:hasInterpretation>ClosedVeristicInterpretation</fuzzy-owl:hasInterpretation>
+                    <fuzzy-owl:hasAttribute rdf:resource="string:sapore"/>
+                  </rdf:Description>
+                </fuzzy-owl:hasDescription>
+              </fuzzy:filter>
+            </rdf:li>
+            <rdf:li>
+              <fuzzy:filter rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_619">
+                <fuzzy-owl:hasDescription>
+                  <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_620">
+                    <fuzzy-owl:hasFuzzySet>
+                      <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_621">
+                        <rdf:li rdf:parseType="Resource">
+                          <fuzzy-owl:hasMembershipValue rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#double"
+                          >0.8</fuzzy-owl:hasMembershipValue>
+                          <fuzzy-owl:hasElement rdf:datatype=
+                          "http://www.w3.org/2001/XMLSchema#string"
+                          >hamburger</fuzzy-owl:hasElement>
+                        </rdf:li>
+                      </rdf:Bag>
+                    </fuzzy-owl:hasFuzzySet>
+                    <fuzzy-owl:hasInterpretation>ClosedVeristicInterpretation</fuzzy-owl:hasInterpretation>
+                    <fuzzy-owl:hasAttribute rdf:resource="string:categoriacibo"/>
+                  </rdf:Description>
+                </fuzzy-owl:hasDescription>
+              </fuzzy:filter>
+            </rdf:li>
+            <rdf:li>
+              <fuzzy:filter rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_622">
+                <fuzzy-owl:hasDescription>
+                  <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_623">
+                    <fuzzy-owl:hasFuzzySet>
+                      <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_624"/>
+                    </fuzzy-owl:hasFuzzySet>
+                    <fuzzy-owl:hasInterpretation>OpenVeristicInterpretation</fuzzy-owl:hasInterpretation>
+                    <fuzzy-owl:hasAttribute rdf:resource="string:produzione"/>
+                  </rdf:Description>
+                </fuzzy-owl:hasDescription>
+              </fuzzy:filter>
+            </rdf:li>
+            <rdf:type rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/filter"/>
+          </rdf:Seq>
+        </rdf:li>
+        <rdf:li>
+          <rdf:Seq rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/SequenceFilter_625">
+            <rdf:li>
+              <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/ParallelFilter_626">
+                <rdf:li>
+                  <fuzzy:filter rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_628">
+                    <fuzzy-owl:hasDescription>
+                      <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_629">
+                        <fuzzy-owl:hasFuzzySet>
+                          <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_630">
+                            <rdf:li rdf:parseType="Resource">
+                              <fuzzy-owl:hasMembershipValue rdf:datatype=
+                              "http://www.w3.org/2001/XMLSchema#double"
+                              >0.5</fuzzy-owl:hasMembershipValue>
+                              <fuzzy-owl:hasElement rdf:datatype=
+                              "http://www.w3.org/2001/XMLSchema#string"
+                              >dolce</fuzzy-owl:hasElement>
+                            </rdf:li>
+                            <rdf:li rdf:parseType="Resource">
+                              <fuzzy-owl:hasMembershipValue rdf:datatype=
+                              "http://www.w3.org/2001/XMLSchema#double"
+                              >0.5</fuzzy-owl:hasMembershipValue>
+                              <fuzzy-owl:hasElement rdf:datatype=
+                              "http://www.w3.org/2001/XMLSchema#string"
+                              >salato</fuzzy-owl:hasElement>
+                            </rdf:li>
+                            <rdf:li rdf:parseType="Resource">
+                              <fuzzy-owl:hasMembershipValue rdf:datatype=
+                              "http://www.w3.org/2001/XMLSchema#double"
+                              >1.0</fuzzy-owl:hasMembershipValue>
+                              <fuzzy-owl:hasElement rdf:datatype=
+                              "http://www.w3.org/2001/XMLSchema#string"
+                              >agrodolce</fuzzy-owl:hasElement>
+                            </rdf:li>
+                          </rdf:Bag>
+                        </fuzzy-owl:hasFuzzySet>
+                        <fuzzy-owl:hasInterpretation>ClosedVeristicInterpretation</fuzzy-owl:hasInterpretation>
+                        <fuzzy-owl:hasAttribute rdf:resource="string:sapore"/>
+                      </rdf:Description>
+                    </fuzzy-owl:hasDescription>
+                  </fuzzy:filter>
+                </rdf:li>
+                <fuzzy-owl:hasAggregator>
+                  <fuzzy:aggregator rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/OWA_627">
+                    <fuzzy-owl:hasValues>
+                      <rdf:Seq>
+                        <rdf:li rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+                        >0.2</rdf:li>
+                      </rdf:Seq>
+                    </fuzzy-owl:hasValues>
+                  </fuzzy:aggregator>
+                </fuzzy-owl:hasAggregator>
+                <rdf:type rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/filter"/>
+              </rdf:Bag>
+            </rdf:li>
+            <rdf:type rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/filter"/>
+          </rdf:Seq>
+        </rdf:li>
+        <rdf:type rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/filter"/>
+      </rdf:Seq>
+    </rdf:li>
+    <rdf:type rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/filter"/>
+  </rdf:Seq>
+</rdf:RDF>

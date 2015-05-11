@@ -3,31 +3,56 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix fuzzy: <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/> .
 
-fuzzy:DescriptionBasedFilter_22
-        a                         fuzzy:filter ;
-        fuzzy-owl:hasDescription  fuzzy:Metadata_23 .
+fuzzy:ParallelFilter_93
+        a                        rdf:Bag , fuzzy:filter ;
+        rdf:_1                   fuzzy:DescriptionBasedFilter_95 ;
+        fuzzy-owl:hasAggregator  fuzzy:OWA_94 .
 
-fuzzy:FuzzySet_24  a  rdf:Bag ;
+fuzzy:OWA_94  a              fuzzy:aggregator ;
+        fuzzy-owl:hasValues  [ a       rdf:Seq ;
+                               rdf:_1  "0.9"^^xsd:double
+                             ] .
+
+fuzzy:ParallelFilter_88
+        a                        rdf:Bag , fuzzy:filter ;
+        rdf:_1                   fuzzy:DescriptionBasedFilter_90 ;
+        fuzzy-owl:hasAggregator  fuzzy:OWA_89 .
+
+fuzzy:Metadata_91  fuzzy-owl:hasAttribute
+                <string:genere> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_92 ;
+        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+
+fuzzy:OWA_89  a              fuzzy:aggregator ;
+        fuzzy-owl:hasValues  [ a       rdf:Seq ;
+                               rdf:_1  "1.0"^^xsd:double
+                             ] .
+
+fuzzy:DescriptionBasedFilter_90
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_91 .
+
+fuzzy:FuzzySet_92  a  rdf:Bag ;
         rdf:_1  [ fuzzy-owl:hasElement          "horror"^^xsd:string ;
                   fuzzy-owl:hasMembershipValue  "0.9"^^xsd:double
                 ] .
 
-fuzzy:ParallelFilter_18
+fuzzy:ParallelFilter_86
         a                        rdf:Bag , fuzzy:filter ;
-        rdf:_1                   fuzzy:ParallelFilter_20 ;
-        rdf:_2                   fuzzy:ParallelFilter_25 ;
-        fuzzy-owl:hasAggregator  fuzzy:OWA_19 .
+        rdf:_1                   fuzzy:ParallelFilter_88 ;
+        rdf:_2                   fuzzy:ParallelFilter_93 ;
+        fuzzy-owl:hasAggregator  fuzzy:OWA_87 .
 
-fuzzy:Metadata_28  fuzzy-owl:hasAttribute
-                <anno> ;
-        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_29 ;
+fuzzy:Metadata_96  fuzzy-owl:hasAttribute
+                <string:anno> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_97 ;
         fuzzy-owl:hasInterpretation  "OpenVeristicInterpretation" .
 
-fuzzy:DescriptionBasedFilter_27
+fuzzy:DescriptionBasedFilter_95
         a                         fuzzy:filter ;
-        fuzzy-owl:hasDescription  fuzzy:Metadata_28 .
+        fuzzy-owl:hasDescription  fuzzy:Metadata_96 .
 
-fuzzy:FuzzySet_29  a  rdf:Bag ;
+fuzzy:FuzzySet_97  a  rdf:Bag ;
         rdf:_1  [ fuzzy-owl:hasElement          "1975"^^xsd:string ;
                   fuzzy-owl:hasMembershipValue  "0.3"^^xsd:double
                 ] ;
@@ -38,33 +63,8 @@ fuzzy:FuzzySet_29  a  rdf:Bag ;
                   fuzzy-owl:hasMembershipValue  "0.2"^^xsd:double
                 ] .
 
-fuzzy:ParallelFilter_20
-        a                        rdf:Bag , fuzzy:filter ;
-        rdf:_1                   fuzzy:DescriptionBasedFilter_22 ;
-        fuzzy-owl:hasAggregator  fuzzy:OWA_21 .
-
-fuzzy:OWA_19  a              fuzzy:aggregator ;
+fuzzy:OWA_87  a              fuzzy:aggregator ;
         fuzzy-owl:hasValues  [ a       rdf:Seq ;
                                rdf:_1  "0.5"^^xsd:double ;
                                rdf:_2  "0.3"^^xsd:double
                              ] .
-
-fuzzy:ParallelFilter_25
-        a                        rdf:Bag , fuzzy:filter ;
-        rdf:_1                   fuzzy:DescriptionBasedFilter_27 ;
-        fuzzy-owl:hasAggregator  fuzzy:OWA_26 .
-
-fuzzy:OWA_21  a              fuzzy:aggregator ;
-        fuzzy-owl:hasValues  [ a       rdf:Seq ;
-                               rdf:_1  "1.0"^^xsd:double
-                             ] .
-
-fuzzy:OWA_26  a              fuzzy:aggregator ;
-        fuzzy-owl:hasValues  [ a       rdf:Seq ;
-                               rdf:_1  "0.9"^^xsd:double
-                             ] .
-
-fuzzy:Metadata_23  fuzzy-owl:hasAttribute
-                <genere> ;
-        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_24 ;
-        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .

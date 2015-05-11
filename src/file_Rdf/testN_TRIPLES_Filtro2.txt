@@ -1,0 +1,6 @@
+<http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/filter> .
+<http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_22> <http://informatica.di.uniba.it/itps/labinf/fuzzy/ontology/hasDescription> <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_23> .
+<http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag> .
+<http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_23> <http://informatica.di.uniba.it/itps/labinf/fuzzy/ontology/hasFuzzySet> <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_24> .
+<http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_23> <http://informatica.di.uniba.it/itps/labinf/fuzzy/ontology/hasInterpretation> "ClosedVeristicInterpretation" .
+<http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_23> <http://informatica.di.uniba.it/itps/labinf/fuzzy/ontology/hasAttribute> <string:anno> .
