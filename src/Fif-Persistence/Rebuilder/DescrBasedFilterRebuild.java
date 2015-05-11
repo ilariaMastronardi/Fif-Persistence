@@ -81,7 +81,7 @@ public class DescrBasedFilterRebuild implements RebuilderRecursion{
 				
 				if (pred.equals(METADATA.hasAttribute)) {
 					
-					String attribute=object.asResource().getLocalName();
+					String attribute=object.asResource().toString();
 					attr=new Attribute(attribute);
 					
 				}else if (pred.equals(METADATA.hasInterpretation)) {
@@ -154,7 +154,9 @@ public class DescrBasedFilterRebuild implements RebuilderRecursion{
 				  
 			}// chiusura while
 	// costruisco il filtro base
+			
 	 Metadata meta =new Metadata(attr,fuzzy,interpr);
+	
 	 Filter filterToReturn=new DescriptionBasedFilter(meta);
 	 
 	return filterToReturn;
