@@ -13,21 +13,21 @@
     <fuzzy-owl:hasMembershipValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.7</fuzzy-owl:hasMembershipValue>
     <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">horror</fuzzy-owl:hasElement>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <fuzzy-owl:hasMembershipValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</fuzzy-owl:hasMembershipValue>
-    <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thriller</fuzzy-owl:hasElement>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <fuzzy-owl:hasMembershipValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.2</fuzzy-owl:hasMembershipValue>
-    <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drammatico</fuzzy-owl:hasElement>
-  </rdf:Description>
   <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_11">
     <fuzzy-owl:hasFuzzySet rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_12"/>
     <fuzzy-owl:hasInterpretation>OpenVeristicInterpretation</fuzzy-owl:hasInterpretation>
     <fuzzy-owl:hasAttribute rdf:resource="string:anno"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <fuzzy-owl:hasMembershipValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.2</fuzzy-owl:hasMembershipValue>
+    <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drammatico</fuzzy-owl:hasElement>
+  </rdf:Description>
   <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_10">
     <rdf:type rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/filter"/>
     <fuzzy-owl:hasDescription rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <fuzzy-owl:hasMembershipValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</fuzzy-owl:hasMembershipValue>
+    <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thriller</fuzzy-owl:hasElement>
   </rdf:Description>
 </rdf:RDF>

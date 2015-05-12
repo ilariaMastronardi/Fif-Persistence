@@ -3,7 +3,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix fuzzy: <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/> .
 
-fuzzy:FuzzySet_230  a  rdf:Bag .
+fuzzy:FuzzySet_230  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "horror"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.7"^^xsd:double
+                ] .
 
 fuzzy:SequenceFilter_213
         a       rdf:Seq , fuzzy:filter ;
@@ -24,14 +27,14 @@ fuzzy:DescriptionBasedFilter_225
         a                         fuzzy:filter ;
         fuzzy-owl:hasDescription  fuzzy:Metadata_226 .
 
-fuzzy:Metadata_226  fuzzy-owl:hasAttribute
-                <string:attori> ;
-        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_227 ;
-        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
-
 fuzzy:Metadata_220  fuzzy-owl:hasAttribute
                 <string:genere> ;
         fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_221 ;
+        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+
+fuzzy:Metadata_226  fuzzy-owl:hasAttribute
+                <string:attori> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_227 ;
         fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
 
 fuzzy:ParallelFilter_211
@@ -66,13 +69,13 @@ fuzzy:DescriptionBasedFilter_219
         a                         fuzzy:filter ;
         fuzzy-owl:hasDescription  fuzzy:Metadata_220 .
 
-fuzzy:DescriptionBasedFilter_222
-        a                         fuzzy:filter ;
-        fuzzy-owl:hasDescription  fuzzy:Metadata_223 .
-
 fuzzy:DescriptionBasedFilter_228
         a                         fuzzy:filter ;
         fuzzy-owl:hasDescription  fuzzy:Metadata_229 .
+
+fuzzy:DescriptionBasedFilter_222
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_223 .
 
 fuzzy:OWA_212  a             fuzzy:aggregator ;
         fuzzy-owl:hasValues  [ a       rdf:Seq ;
@@ -96,7 +99,7 @@ fuzzy:Metadata_223  fuzzy-owl:hasAttribute
 fuzzy:Metadata_229  fuzzy-owl:hasAttribute
                 <string:anno> ;
         fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_230 ;
-        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+        fuzzy-owl:hasInterpretation  "OpenVeristicInterpretation" .
 
 fuzzy:FuzzySet_221  a  rdf:Bag .
 

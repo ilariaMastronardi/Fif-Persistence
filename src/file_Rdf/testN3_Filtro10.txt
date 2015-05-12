@@ -3,7 +3,16 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix fuzzy: <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/> .
 
-fuzzy:FuzzySet_534  a  rdf:Bag .
+fuzzy:FuzzySet_534  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "dolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_2  [ fuzzy-owl:hasElement          "salato"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_3  [ fuzzy-owl:hasElement          "agrodolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
+                ] .
 
 fuzzy:OWA_537  a             fuzzy:aggregator ;
         fuzzy-owl:hasValues  [ a       rdf:Seq ;
@@ -96,8 +105,14 @@ fuzzy:SequenceFilter_535
         rdf:_1  fuzzy:ParallelFilter_536 .
 
 fuzzy:FuzzySet_531  a  rdf:Bag ;
-        rdf:_1  [ fuzzy-owl:hasElement          "hamburger"^^xsd:string ;
-                  fuzzy-owl:hasMembershipValue  "0.8"^^xsd:double
+        rdf:_1  [ fuzzy-owl:hasElement          "dolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_2  [ fuzzy-owl:hasElement          "salato"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_3  [ fuzzy-owl:hasElement          "agrodolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
                 ] .
 
 fuzzy:Metadata_539  fuzzy-owl:hasAttribute

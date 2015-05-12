@@ -123,9 +123,16 @@
         <fuzzy-owl:hasDescription>
           <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_289">
             <fuzzy-owl:hasFuzzySet>
-              <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_290"/>
+              <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_290">
+                <rdf:li rdf:parseType="Resource">
+                  <fuzzy-owl:hasMembershipValue rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#double">0.7</fuzzy-owl:hasMembershipValue>
+                  <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                  >horror</fuzzy-owl:hasElement>
+                </rdf:li>
+              </rdf:Bag>
             </fuzzy-owl:hasFuzzySet>
-            <fuzzy-owl:hasInterpretation>ClosedVeristicInterpretation</fuzzy-owl:hasInterpretation>
+            <fuzzy-owl:hasInterpretation>OpenVeristicInterpretation</fuzzy-owl:hasInterpretation>
             <fuzzy-owl:hasAttribute rdf:resource="string:anno"/>
           </rdf:Description>
         </fuzzy-owl:hasDescription>

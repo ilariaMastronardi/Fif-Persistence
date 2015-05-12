@@ -8,12 +8,12 @@ fuzzy:SequenceFilter_302
         rdf:_1  fuzzy:ParallelFilter_303 ;
         rdf:_2  fuzzy:ParallelFilter_308 .
 
-fuzzy:OWA_309  a             fuzzy:aggregator ;
+fuzzy:OWA_304  a             fuzzy:aggregator ;
         fuzzy-owl:hasValues  [ a       rdf:Seq ;
                                rdf:_1  "0.4"^^xsd:double
                              ] .
 
-fuzzy:OWA_304  a             fuzzy:aggregator ;
+fuzzy:OWA_309  a             fuzzy:aggregator ;
         fuzzy-owl:hasValues  [ a       rdf:Seq ;
                                rdf:_1  "0.4"^^xsd:double
                              ] .

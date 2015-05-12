@@ -44,9 +44,21 @@
               <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_392">
                 <rdf:li rdf:parseType="Resource">
                   <fuzzy-owl:hasMembershipValue rdf:datatype=
-                  "http://www.w3.org/2001/XMLSchema#double">0.8</fuzzy-owl:hasMembershipValue>
+                  "http://www.w3.org/2001/XMLSchema#double">0.5</fuzzy-owl:hasMembershipValue>
                   <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-                  >hamburger</fuzzy-owl:hasElement>
+                  >dolce</fuzzy-owl:hasElement>
+                </rdf:li>
+                <rdf:li rdf:parseType="Resource">
+                  <fuzzy-owl:hasMembershipValue rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#double">0.5</fuzzy-owl:hasMembershipValue>
+                  <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                  >salato</fuzzy-owl:hasElement>
+                </rdf:li>
+                <rdf:li rdf:parseType="Resource">
+                  <fuzzy-owl:hasMembershipValue rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#double">1.0</fuzzy-owl:hasMembershipValue>
+                  <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                  >agrodolce</fuzzy-owl:hasElement>
                 </rdf:li>
               </rdf:Bag>
             </fuzzy-owl:hasFuzzySet>
@@ -61,7 +73,26 @@
         <fuzzy-owl:hasDescription>
           <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_394">
             <fuzzy-owl:hasFuzzySet>
-              <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_395"/>
+              <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_395">
+                <rdf:li rdf:parseType="Resource">
+                  <fuzzy-owl:hasMembershipValue rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#double">0.5</fuzzy-owl:hasMembershipValue>
+                  <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                  >dolce</fuzzy-owl:hasElement>
+                </rdf:li>
+                <rdf:li rdf:parseType="Resource">
+                  <fuzzy-owl:hasMembershipValue rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#double">0.5</fuzzy-owl:hasMembershipValue>
+                  <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                  >salato</fuzzy-owl:hasElement>
+                </rdf:li>
+                <rdf:li rdf:parseType="Resource">
+                  <fuzzy-owl:hasMembershipValue rdf:datatype=
+                  "http://www.w3.org/2001/XMLSchema#double">1.0</fuzzy-owl:hasMembershipValue>
+                  <fuzzy-owl:hasElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                  >agrodolce</fuzzy-owl:hasElement>
+                </rdf:li>
+              </rdf:Bag>
             </fuzzy-owl:hasFuzzySet>
             <fuzzy-owl:hasInterpretation>OpenVeristicInterpretation</fuzzy-owl:hasInterpretation>
             <fuzzy-owl:hasAttribute rdf:resource="string:produzione"/>

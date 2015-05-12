@@ -25,12 +25,12 @@ fuzzy:SequenceFilter_291
 
 fuzzy:FuzzySet_301  a  rdf:Bag .
 
-fuzzy:OWA_293  a             fuzzy:aggregator ;
+fuzzy:OWA_298  a             fuzzy:aggregator ;
         fuzzy-owl:hasValues  [ a       rdf:Seq ;
                                rdf:_1  "0.4"^^xsd:double
                              ] .
 
-fuzzy:OWA_298  a             fuzzy:aggregator ;
+fuzzy:OWA_293  a             fuzzy:aggregator ;
         fuzzy-owl:hasValues  [ a       rdf:Seq ;
                                rdf:_1  "0.4"^^xsd:double
                              ] .

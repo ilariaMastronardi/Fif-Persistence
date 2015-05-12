@@ -7,14 +7,14 @@ fuzzy:DescriptionBasedFilter_199
         a                         fuzzy:filter ;
         fuzzy-owl:hasDescription  fuzzy:Metadata_200 .
 
-fuzzy:Metadata_203  fuzzy-owl:hasAttribute
-                <string:anno> ;
-        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_204 ;
-        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
-
 fuzzy:Metadata_209  fuzzy-owl:hasAttribute
                 <string:anno> ;
         fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_210 ;
+        fuzzy-owl:hasInterpretation  "OpenVeristicInterpretation" .
+
+fuzzy:Metadata_203  fuzzy-owl:hasAttribute
+                <string:anno> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_204 ;
         fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
 
 fuzzy:OWA_198  a             fuzzy:aggregator ;
@@ -38,7 +38,10 @@ fuzzy:FuzzySet_207  a  rdf:Bag ;
                   fuzzy-owl:hasMembershipValue  "0.8"^^xsd:double
                 ] .
 
-fuzzy:FuzzySet_210  a  rdf:Bag .
+fuzzy:FuzzySet_210  a  rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "horror"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.7"^^xsd:double
+                ] .
 
 fuzzy:DescriptionBasedFilter_205
         a                         fuzzy:filter ;
