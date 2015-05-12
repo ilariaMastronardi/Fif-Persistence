@@ -1,3 +1,4 @@
+
 package Test;
 
 import java.io.FileInputStream;
@@ -321,7 +322,7 @@ public class FilterRdfRebuilderTest extends TestCase {
 	
 	
 	// 1 PARALLEL FILTER COMPOSTO DA UN DESCRIPTION BASED FILTER,UN SEQUENCE FILTER E UN PARALLEL FILTER
-	// IL SEQUENCE FILTER è COMPOSTO DA 1 DESCRIPTIONBASEDFILTER CREATO TRAMITE IL METODO : createFirstFilter();
+	// IL SEQUENCE FILTER è COMPOSTO DA 1 DESCRIPTIONBASEDFILTER con fuzzy set =1 elemento
 	//IL PARALLEL FILTER è CREATO TRAMITE IL METODO : createThirdFilter();
 	// IL DESCRIPTIONBASEDFILTER è CREATO TRAMITE IL METODO:  createSecondFilter();
 	
@@ -332,10 +333,19 @@ public class FilterRdfRebuilderTest extends TestCase {
 		//filtro parallelo
 		Filter f2=createThirdFilter();
 		//descriptionBasedFilter
-		Filter f3=createSecondFilter();
+		Attribute att1 = new Attribute("String:anno");
+				
+		FuzzySet fs1 = new FuzzySet();
+		fs1.setValue("horror", 0.7);
+		
+		Metadata m = new Metadata(att1, fs1,
+					OpenVeristicInterpretation.getinstance());
+
+		Filter filtro = new DescriptionBasedFilter(m);
+				
 		
 		Aggregator owa=new OWA(0.2,0.7,0.3);
-		Filter toReturn=new ParallelFilter(owa,f1,f2,f3);
+		Filter toReturn=new ParallelFilter(owa,f1,f2,filtro);
 		
 		return toReturn;
 		
@@ -377,9 +387,7 @@ public class FilterRdfRebuilderTest extends TestCase {
 	}
 	
 	//1 SEQUENCEFILTER COMPOSTO DA TRE DESCRIPTIONBASEDFILTER
-	//1 METADATA CON FUZZY SET VUOTO
-	//1 METADATA CON FUZZY SET =1 ELEMENTO
-	// 1 METADATA CON FUZZY SET >1
+	//3 metadati differenti con stesso fuzzy set
 	// 2 METADATA CON STESSA INTERPRETAZIONE E 1 METADATA CON INTERPRETAZIONE DIVERSA  
 	private Filter createEightFilter(){
 		
@@ -388,21 +396,18 @@ public class FilterRdfRebuilderTest extends TestCase {
 		Attribute att3 = new Attribute("String:produzione");
 
 		FuzzySet fs1 = new FuzzySet();
-		FuzzySet fs2 = new FuzzySet();
-		FuzzySet fs3= new FuzzySet();
 		
 		fs1.setValue("agrodolce", 1);
 		fs1.setValue("salato", 0.5);
 		fs1.setValue("dolce", 0.5);
-		
-		fs2.setValue("hamburger", 0.8);
+
 		
 		// creazione metadati
 		Metadata m = new Metadata(att1, fs1,
 			ClosedVeristicInterpretation.getinstance());
-		Metadata m2 = new Metadata(att2, fs2,
+		Metadata m2 = new Metadata(att2, fs1,
 			ClosedVeristicInterpretation.getinstance());
-		Metadata m3 = new Metadata(att3, fs3,
+		Metadata m3 = new Metadata(att3, fs1,
 				OpenVeristicInterpretation.getinstance());
 		
 		// creo I Description Based Filter
