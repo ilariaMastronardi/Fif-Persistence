@@ -3,16 +3,8 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix fuzzy: <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/> .
 
-fuzzy:Metadata_5  fuzzy-owl:hasAttribute
-                <string:anno> ;
-        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_6 ;
-        fuzzy-owl:hasInterpretation  "OpenVeristicInterpretation" .
-
-fuzzy:DescriptionBasedFilter_4
-        a                         fuzzy:filter ;
-        fuzzy-owl:hasDescription  fuzzy:Metadata_5 .
-
-fuzzy:FuzzySet_6  a  rdf:Bag ;
+fuzzy:FuzzySet_2133814f
+        a       rdf:Bag ;
         rdf:_1  [ fuzzy-owl:hasElement          "horror"^^xsd:string ;
                   fuzzy-owl:hasMembershipValue  "0.7"^^xsd:double
                 ] ;
@@ -22,3 +14,12 @@ fuzzy:FuzzySet_6  a  rdf:Bag ;
         rdf:_3  [ fuzzy-owl:hasElement          "drammatico"^^xsd:string ;
                   fuzzy-owl:hasMembershipValue  "0.2"^^xsd:double
                 ] .
+
+fuzzy:DescriptionBasedFilter_2
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_1460a8c0 .
+
+fuzzy:Metadata_1460a8c0
+        fuzzy-owl:hasAttribute       <string:anno> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_2133814f ;
+        fuzzy-owl:hasInterpretation  "OpenVeristicInterpretation" .

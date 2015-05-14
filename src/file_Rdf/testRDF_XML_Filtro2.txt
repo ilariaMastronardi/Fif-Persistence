@@ -3,16 +3,16 @@
     xmlns:fuzzy-owl="http://informatica.di.uniba.it/itps/labinf/fuzzy/ontology/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:fuzzy="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/" > 
-  <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_26">
-    <fuzzy-owl:hasFuzzySet rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_27"/>
+  <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_15bbf42f">
+    <fuzzy-owl:hasFuzzySet rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_550ee7e5"/>
     <fuzzy-owl:hasInterpretation>ClosedVeristicInterpretation</fuzzy-owl:hasInterpretation>
     <fuzzy-owl:hasAttribute rdf:resource="string:anno"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_25">
+  <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_9">
     <rdf:type rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/filter"/>
-    <fuzzy-owl:hasDescription rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_26"/>
+    <fuzzy-owl:hasDescription rdf:resource="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_15bbf42f"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_27">
+  <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_550ee7e5">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"/>
   </rdf:Description>
 </rdf:RDF>

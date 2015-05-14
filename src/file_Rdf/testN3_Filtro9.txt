@@ -3,85 +3,67 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix fuzzy: <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/> .
 
-fuzzy:DescriptionBasedFilter_415
-        a                         fuzzy:filter ;
-        fuzzy-owl:hasDescription  fuzzy:Metadata_416 .
-
-fuzzy:Metadata_416  fuzzy-owl:hasAttribute
-                <string:sapore> ;
-        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_417 ;
+fuzzy:Metadata_25084a1e
+        fuzzy-owl:hasAttribute       <string:sapore> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_156b88f5 ;
         fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
 
-fuzzy:FuzzySet_429  a  rdf:Bag ;
-        rdf:_1  [ fuzzy-owl:hasElement          "dolce"^^xsd:string ;
-                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
-                ] ;
-        rdf:_2  [ fuzzy-owl:hasElement          "salato"^^xsd:string ;
-                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
-                ] ;
-        rdf:_3  [ fuzzy-owl:hasElement          "agrodolce"^^xsd:string ;
-                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
-                ] .
-
-fuzzy:FuzzySet_423  a  rdf:Bag ;
-        rdf:_1  [ fuzzy-owl:hasElement          "dolce"^^xsd:string ;
-                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
-                ] ;
-        rdf:_2  [ fuzzy-owl:hasElement          "salato"^^xsd:string ;
-                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
-                ] ;
-        rdf:_3  [ fuzzy-owl:hasElement          "agrodolce"^^xsd:string ;
-                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
-                ] .
-
-fuzzy:ParallelFilter_425
-        a                        rdf:Bag , fuzzy:filter ;
-        rdf:_1                   fuzzy:DescriptionBasedFilter_427 ;
-        fuzzy-owl:hasAggregator  fuzzy:OWA_426 .
-
-fuzzy:DescriptionBasedFilter_418
+fuzzy:DescriptionBasedFilter_173
         a                         fuzzy:filter ;
-        fuzzy-owl:hasDescription  fuzzy:Metadata_419 .
+        fuzzy-owl:hasDescription  fuzzy:Metadata_16610890 .
 
-fuzzy:DescriptionBasedFilter_421
-        a                         fuzzy:filter ;
-        fuzzy-owl:hasDescription  fuzzy:Metadata_422 .
-
-fuzzy:DescriptionBasedFilter_427
-        a                         fuzzy:filter ;
-        fuzzy-owl:hasDescription  fuzzy:Metadata_428 .
-
-fuzzy:SequenceFilter_424
+fuzzy:SequenceFilter_170
         a       rdf:Seq , fuzzy:filter ;
-        rdf:_1  fuzzy:ParallelFilter_425 .
+        rdf:_1  fuzzy:DescriptionBasedFilter_171 ;
+        rdf:_2  fuzzy:DescriptionBasedFilter_172 ;
+        rdf:_3  fuzzy:DescriptionBasedFilter_173 .
 
-fuzzy:Metadata_419  fuzzy-owl:hasAttribute
-                <string:categoriacibo> ;
-        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_420 ;
-        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+fuzzy:ParallelFilter_175
+        a                        rdf:Bag , fuzzy:filter ;
+        rdf:_1                   fuzzy:DescriptionBasedFilter_176 ;
+        fuzzy-owl:hasAggregator  fuzzy:OWA_71def8f8 .
 
-fuzzy:Metadata_422  fuzzy-owl:hasAttribute
-                <string:produzione> ;
-        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_423 ;
-        fuzzy-owl:hasInterpretation  "OpenVeristicInterpretation" .
+fuzzy:FuzzySet_156b88f5
+        a       rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "dolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_2  [ fuzzy-owl:hasElement          "salato"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_3  [ fuzzy-owl:hasElement          "agrodolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
+                ] ;
+        rdf:_4  [ fuzzy-owl:hasElement          "dolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_5  [ fuzzy-owl:hasElement          "salato"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_6  [ fuzzy-owl:hasElement          "agrodolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
+                ] ;
+        rdf:_7  [ fuzzy-owl:hasElement          "dolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_8  [ fuzzy-owl:hasElement          "salato"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
+                ] ;
+        rdf:_9  [ fuzzy-owl:hasElement          "agrodolce"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
+                ] .
 
-fuzzy:Metadata_428  fuzzy-owl:hasAttribute
-                <string:sapore> ;
-        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_429 ;
-        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+fuzzy:DescriptionBasedFilter_172
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_3bf9ce3e .
 
-fuzzy:OWA_426  a             fuzzy:aggregator ;
+fuzzy:OWA_71def8f8  a        fuzzy:aggregator ;
         fuzzy-owl:hasValues  [ a       rdf:Seq ;
                                rdf:_1  "0.2"^^xsd:double
                              ] .
 
-fuzzy:SequenceFilter_414
-        a       rdf:Seq , fuzzy:filter ;
-        rdf:_1  fuzzy:DescriptionBasedFilter_415 ;
-        rdf:_2  fuzzy:DescriptionBasedFilter_418 ;
-        rdf:_3  fuzzy:DescriptionBasedFilter_421 .
-
-fuzzy:FuzzySet_417  a  rdf:Bag ;
+fuzzy:FuzzySet_4d465b11
+        a       rdf:Bag ;
         rdf:_1  [ fuzzy-owl:hasElement          "dolce"^^xsd:string ;
                   fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
                 ] ;
@@ -92,18 +74,34 @@ fuzzy:FuzzySet_417  a  rdf:Bag ;
                   fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
                 ] .
 
-fuzzy:FuzzySet_420  a  rdf:Bag ;
-        rdf:_1  [ fuzzy-owl:hasElement          "dolce"^^xsd:string ;
-                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
-                ] ;
-        rdf:_2  [ fuzzy-owl:hasElement          "salato"^^xsd:string ;
-                  fuzzy-owl:hasMembershipValue  "0.5"^^xsd:double
-                ] ;
-        rdf:_3  [ fuzzy-owl:hasElement          "agrodolce"^^xsd:string ;
-                  fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
-                ] .
+fuzzy:DescriptionBasedFilter_171
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_25084a1e .
 
-fuzzy:SequenceFilter_413
+fuzzy:SequenceFilter_174
         a       rdf:Seq , fuzzy:filter ;
-        rdf:_1  fuzzy:SequenceFilter_414 ;
-        rdf:_2  fuzzy:SequenceFilter_424 .
+        rdf:_1  fuzzy:ParallelFilter_175 .
+
+fuzzy:Metadata_3bf9ce3e
+        fuzzy-owl:hasAttribute       <string:categoriacibo> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_156b88f5 ;
+        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+
+fuzzy:DescriptionBasedFilter_176
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_383bfa16 .
+
+fuzzy:Metadata_383bfa16
+        fuzzy-owl:hasAttribute       <string:sapore> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_4d465b11 ;
+        fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
+
+fuzzy:Metadata_16610890
+        fuzzy-owl:hasAttribute       <string:produzione> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_156b88f5 ;
+        fuzzy-owl:hasInterpretation  "OpenVeristicInterpretation" .
+
+fuzzy:SequenceFilter_169
+        a       rdf:Seq , fuzzy:filter ;
+        rdf:_1  fuzzy:SequenceFilter_170 ;
+        rdf:_2  fuzzy:SequenceFilter_174 .

@@ -3,7 +3,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix fuzzy: <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/> .
 
-fuzzy:FuzzySet_154  a  rdf:Bag ;
+fuzzy:SequenceFilter_57
+        a       rdf:Seq , fuzzy:filter ;
+        rdf:_1  fuzzy:DescriptionBasedFilter_58 ;
+        rdf:_2  fuzzy:DescriptionBasedFilter_59 .
+
+fuzzy:FuzzySet_2053d869
+        a       rdf:Bag ;
+        rdf:_1  [ fuzzy-owl:hasElement          "the originals"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.7"^^xsd:double
+                ] ;
+        rdf:_2  [ fuzzy-owl:hasElement          "the vampire diares"^^xsd:string ;
+                  fuzzy-owl:hasMembershipValue  "0.9"^^xsd:double
+                ] .
+
+fuzzy:DescriptionBasedFilter_58
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_1e683a3e .
+
+fuzzy:ParallelFilter_56
+        a                        rdf:Bag , fuzzy:filter ;
+        rdf:_1                   fuzzy:SequenceFilter_57 ;
+        fuzzy-owl:hasAggregator  fuzzy:OWA_2b48a640 .
+
+fuzzy:FuzzySet_14555e0a
+        a       rdf:Bag ;
         rdf:_1  [ fuzzy-owl:hasElement          "katherine paul"^^xsd:string ;
                   fuzzy-owl:hasMembershipValue  "0.7"^^xsd:double
                 ] ;
@@ -14,43 +38,21 @@ fuzzy:FuzzySet_154  a  rdf:Bag ;
                   fuzzy-owl:hasMembershipValue  "1.0"^^xsd:double
                 ] .
 
-fuzzy:Metadata_150  fuzzy-owl:hasAttribute
-                <string:titolo> ;
-        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_151 ;
+fuzzy:DescriptionBasedFilter_59
+        a                         fuzzy:filter ;
+        fuzzy-owl:hasDescription  fuzzy:Metadata_7a419da4 .
+
+fuzzy:Metadata_7a419da4
+        fuzzy-owl:hasAttribute       <string:attori> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_14555e0a ;
+        fuzzy-owl:hasInterpretation  "PossibilisticInterpretation" .
+
+fuzzy:Metadata_1e683a3e
+        fuzzy-owl:hasAttribute       <string:titolo> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_2053d869 ;
         fuzzy-owl:hasInterpretation  "ClosedVeristicInterpretation" .
 
-fuzzy:DescriptionBasedFilter_152
-        a                         fuzzy:filter ;
-        fuzzy-owl:hasDescription  fuzzy:Metadata_153 .
-
-fuzzy:ParallelFilter_146
-        a                        rdf:Bag , fuzzy:filter ;
-        rdf:_1                   fuzzy:SequenceFilter_148 ;
-        fuzzy-owl:hasAggregator  fuzzy:OWA_147 .
-
-fuzzy:OWA_147  a             fuzzy:aggregator ;
+fuzzy:OWA_2b48a640  a        fuzzy:aggregator ;
         fuzzy-owl:hasValues  [ a       rdf:Seq ;
                                rdf:_1  "0.4"^^xsd:double
                              ] .
-
-fuzzy:Metadata_153  fuzzy-owl:hasAttribute
-                <string:attori> ;
-        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_154 ;
-        fuzzy-owl:hasInterpretation  "PossibilisticInterpretation" .
-
-fuzzy:SequenceFilter_148
-        a       rdf:Seq , fuzzy:filter ;
-        rdf:_1  fuzzy:DescriptionBasedFilter_149 ;
-        rdf:_2  fuzzy:DescriptionBasedFilter_152 .
-
-fuzzy:DescriptionBasedFilter_149
-        a                         fuzzy:filter ;
-        fuzzy-owl:hasDescription  fuzzy:Metadata_150 .
-
-fuzzy:FuzzySet_151  a  rdf:Bag ;
-        rdf:_1  [ fuzzy-owl:hasElement          "the originals"^^xsd:string ;
-                  fuzzy-owl:hasMembershipValue  "0.7"^^xsd:double
-                ] ;
-        rdf:_2  [ fuzzy-owl:hasElement          "the vampire diares"^^xsd:string ;
-                  fuzzy-owl:hasMembershipValue  "0.9"^^xsd:double
-                ] .

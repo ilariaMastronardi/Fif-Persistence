@@ -3,49 +3,46 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix fuzzy: <http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/> .
 
-fuzzy:SequenceFilter_302
+fuzzy:Metadata_57d7f8ca
+        fuzzy-owl:hasAttribute       <string:autori> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_76c3e77a ;
+        fuzzy-owl:hasInterpretation  "PossibilisticInterpretation" .
+
+fuzzy:ParallelFilter_124
+        a                        rdf:Bag , fuzzy:filter ;
+        rdf:_1                   fuzzy:DescriptionBasedFilter_125 ;
+        fuzzy-owl:hasAggregator  fuzzy:OWA_32b260fa .
+
+fuzzy:FuzzySet_76c3e77a
+        a       rdf:Bag .
+
+fuzzy:ParallelFilter_122
+        a                        rdf:Bag , fuzzy:filter ;
+        rdf:_1                   fuzzy:DescriptionBasedFilter_123 ;
+        fuzzy-owl:hasAggregator  fuzzy:OWA_32b260fa .
+
+fuzzy:SequenceFilter_121
         a       rdf:Seq , fuzzy:filter ;
-        rdf:_1  fuzzy:ParallelFilter_303 ;
-        rdf:_2  fuzzy:ParallelFilter_308 .
+        rdf:_1  fuzzy:ParallelFilter_122 ;
+        rdf:_2  fuzzy:ParallelFilter_124 .
 
-fuzzy:OWA_304  a             fuzzy:aggregator ;
+fuzzy:FuzzySet_6d4e5011
+        a       rdf:Bag .
+
+fuzzy:OWA_32b260fa  a        fuzzy:aggregator ;
         fuzzy-owl:hasValues  [ a       rdf:Seq ;
                                rdf:_1  "0.4"^^xsd:double
                              ] .
 
-fuzzy:OWA_309  a             fuzzy:aggregator ;
-        fuzzy-owl:hasValues  [ a       rdf:Seq ;
-                               rdf:_1  "0.4"^^xsd:double
-                             ] .
-
-fuzzy:FuzzySet_312  a  rdf:Bag .
-
-fuzzy:DescriptionBasedFilter_310
+fuzzy:DescriptionBasedFilter_125
         a                         fuzzy:filter ;
-        fuzzy-owl:hasDescription  fuzzy:Metadata_311 .
+        fuzzy-owl:hasDescription  fuzzy:Metadata_57d7f8ca .
 
-fuzzy:Metadata_311  fuzzy-owl:hasAttribute
-                <string:autori> ;
-        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_312 ;
+fuzzy:Metadata_581ac8a8
+        fuzzy-owl:hasAttribute       <string:edizione> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_6d4e5011 ;
         fuzzy-owl:hasInterpretation  "PossibilisticInterpretation" .
 
-fuzzy:FuzzySet_307  a  rdf:Bag .
-
-fuzzy:DescriptionBasedFilter_305
+fuzzy:DescriptionBasedFilter_123
         a                         fuzzy:filter ;
-        fuzzy-owl:hasDescription  fuzzy:Metadata_306 .
-
-fuzzy:ParallelFilter_308
-        a                        rdf:Bag , fuzzy:filter ;
-        rdf:_1                   fuzzy:DescriptionBasedFilter_310 ;
-        fuzzy-owl:hasAggregator  fuzzy:OWA_309 .
-
-fuzzy:Metadata_306  fuzzy-owl:hasAttribute
-                <string:edizione> ;
-        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_307 ;
-        fuzzy-owl:hasInterpretation  "PossibilisticInterpretation" .
-
-fuzzy:ParallelFilter_303
-        a                        rdf:Bag , fuzzy:filter ;
-        rdf:_1                   fuzzy:DescriptionBasedFilter_305 ;
-        fuzzy-owl:hasAggregator  fuzzy:OWA_304 .
+        fuzzy-owl:hasDescription  fuzzy:Metadata_581ac8a8 .

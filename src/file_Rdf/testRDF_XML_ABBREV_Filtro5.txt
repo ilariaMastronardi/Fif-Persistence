@@ -3,15 +3,15 @@
     xmlns:fuzzy-owl="http://informatica.di.uniba.it/itps/labinf/fuzzy/ontology/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:fuzzy="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/">
-  <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/ParallelFilter_182">
+  <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/ParallelFilter_72">
     <rdf:li>
-      <rdf:Seq rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/SequenceFilter_184">
+      <rdf:Seq rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/SequenceFilter_73">
         <rdf:li>
-          <fuzzy:filter rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_185">
+          <fuzzy:filter rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_74">
             <fuzzy-owl:hasDescription>
-              <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_186">
+              <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_1e683a3e">
                 <fuzzy-owl:hasFuzzySet>
-                  <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_187">
+                  <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_2053d869">
                     <rdf:li rdf:parseType="Resource">
                       <fuzzy-owl:hasMembershipValue rdf:datatype=
                       "http://www.w3.org/2001/XMLSchema#double"
@@ -35,11 +35,11 @@
           </fuzzy:filter>
         </rdf:li>
         <rdf:li>
-          <fuzzy:filter rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_188">
+          <fuzzy:filter rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/DescriptionBasedFilter_75">
             <fuzzy-owl:hasDescription>
-              <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_189">
+              <rdf:Description rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/Metadata_7a419da4">
                 <fuzzy-owl:hasFuzzySet>
-                  <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_190">
+                  <rdf:Bag rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/FuzzySet_14555e0a">
                     <rdf:li rdf:parseType="Resource">
                       <fuzzy-owl:hasMembershipValue rdf:datatype=
                       "http://www.w3.org/2001/XMLSchema#double"
@@ -73,7 +73,7 @@
       </rdf:Seq>
     </rdf:li>
     <fuzzy-owl:hasAggregator>
-      <fuzzy:aggregator rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/OWA_183">
+      <fuzzy:aggregator rdf:about="http://informatica.di.uniba.it/itps/labinf/fuzzy/resource/OWA_2b48a640">
         <fuzzy-owl:hasValues>
           <rdf:Seq>
             <rdf:li rdf:datatype="http://www.w3.org/2001/XMLSchema#double"

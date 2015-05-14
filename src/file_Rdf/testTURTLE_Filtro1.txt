@@ -5,9 +5,10 @@
 
 fuzzy:DescriptionBasedFilter_1
         a                         fuzzy:filter ;
-        fuzzy-owl:hasDescription  fuzzy:Metadata_2 .
+        fuzzy-owl:hasDescription  fuzzy:Metadata_1460a8c0 .
 
-fuzzy:FuzzySet_3  a  rdf:Bag ;
+fuzzy:FuzzySet_2133814f
+        a       rdf:Bag ;
         rdf:_1  [ fuzzy-owl:hasElement          "horror"^^xsd:string ;
                   fuzzy-owl:hasMembershipValue  "0.7"^^xsd:double
                 ] ;
@@ -18,7 +19,7 @@ fuzzy:FuzzySet_3  a  rdf:Bag ;
                   fuzzy-owl:hasMembershipValue  "0.2"^^xsd:double
                 ] .
 
-fuzzy:Metadata_2  fuzzy-owl:hasAttribute
-                <string:anno> ;
-        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_3 ;
+fuzzy:Metadata_1460a8c0
+        fuzzy-owl:hasAttribute       <string:anno> ;
+        fuzzy-owl:hasFuzzySet        fuzzy:FuzzySet_2133814f ;
         fuzzy-owl:hasInterpretation  "OpenVeristicInterpretation" .
